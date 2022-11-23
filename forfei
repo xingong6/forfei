@@ -1,0 +1,17 @@
+  sort_type='stim_to_move';
+align_by='stimOn';
+  
+  
+  function [curr_smoothed_psth, curr_psth, raster_x, raster_y, curr_raster] = JF_raster_PSTH_new(spike_templates, spike_times_timeline, ...
+    thisTemplate, raster_window, psth_bin_size, align_times, align_group, sort_by, plot_me,figures_filepath,algin_by,sort_type)
+  
+            xlabel('Time aligned by ', align_by);
+            ylabel('Trails sorted by'sort by)
+            set(gca, 'LineWidth', 2, 'FontSize', 12, 'FontName', 'Arial');
+            % name and save the plot
+            title(['PSTH aligned by', num2str(i)]);
+            
+            file_name=sprintf('%d_light_stimulation_Firing_rate_change',i);
+            % print(gcf,'-dpdf',[figures_filepath,'\',file_name,'.pdf']);
+            print(gcf,'-dpng',[figures_filepath,'\',file_name,'.png']);
+            % saveas(gcf,[figures_filepath,'\',file_name,'.png']);
